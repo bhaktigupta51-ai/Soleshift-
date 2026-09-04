@@ -1,0 +1,469 @@
+/* ==========================================
+   SOLESHIFT WEBSITE - CSS STYLING
+   This file controls all the colors, fonts, layouts
+   ========================================== */
+
+/* Reset all default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables - Easy to change! */
+:root {
+    --primary-green: #2D5F4F;    /* Main dark green */
+    --primary-gold: #D4AF37;     /* Gold accent color */
+    --light-green: #4A8A7A;      /* Lighter green */
+    --dark-green: #1a3a32;       /* Very dark green */
+    --light-bg: #f8f7f3;         /* Light beige background */
+    --text-dark: #2c2c2c;        /* Dark text */
+    --text-light: #666;          /* Light gray text */
+}
+
+/* Body - Main styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: white;
+}
+
+/* ==========================================
+   HEADER STYLES
+   ========================================== */
+header {
+    background: var(--primary-green);
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-gold);
+}
+
+/* ==========================================
+   HERO SECTION - Main Banner
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-tagline {
+    font-size: 1.8rem;
+    color: var(--primary-gold);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.95;
+}
+
+/* ==========================================
+   CONTAINER - Centered content wrapper
+   ========================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ==========================================
+   GENERAL SECTION STYLES
+   ========================================== */
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================
+   PROBLEMS SECTION
+   ========================================== */
+.problems {
+    background: var(--light-bg);
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.problem-card {
+    background: white;
+    padding: 2rem;
+    border-left: 4px solid var(--primary-gold);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+}
+
+.problem-card h3 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.problem-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* ==========================================
+   SOLUTION SECTION
+   ========================================== */
+.solution {
+    background: white;
+}
+
+.solution-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.solution-text h3 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.solution-text p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.solution-highlight {
+    background: var(--light-bg);
+    border-left: 4px solid var(--primary-gold);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.solution-highlight p {
+    font-style: italic;
+    color: var(--primary-green);
+    margin: 0;
+}
+
+.solution-image {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-bg);
+    border-radius: 12px;
+}
+
+.solution-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   HOW IT WORKS SECTION
+   ========================================== */
+.how-it-works {
+    background: var(--light-bg);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-green);
+    color: var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.8rem;
+}
+
+.step p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   PRODUCTS SECTION
+   ========================================== */
+.products {
+    background: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(45, 95, 79, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 4rem;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.product-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================
+   TEAM SECTION
+   ========================================== */
+.team {
+    background: var(--light-bg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-gold);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.team-member h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   CONTACT SECTION
+   ========================================== */
+.contact {
+    background: var(--primary-green);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.contact h2 {
+    color: var(--primary-gold);
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-gold);
+}
+
+.contact-card h3 {
+    color: var(--primary-gold);
+    margin-bottom: 0.5rem;
+}
+
+.contact-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact-card a:hover {
+    color: var(--primary-gold);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background: var(--dark-green);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - Mobile Friendly
+   ========================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.3rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .solution-content {
+        grid-template-columns: 1fr;
+    }
+}

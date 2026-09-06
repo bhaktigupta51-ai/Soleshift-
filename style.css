@@ -573,10 +573,10 @@ section {
     padding-bottom: 140px;
 
     background:
-        linear-gradient(
-            180deg,
-            var(--charcoal),
-            var(--black)
+        radial-gradient(
+            circle at 50% 20%,
+           rgba(20, 91, 67, 0.10),
+           transparent 45%
         );
 }
 
@@ -606,7 +606,7 @@ section {
 
     gap: 1px;
 
-    background: var(--border);
+    background: transparent;
 }
 
 .sole-card {
@@ -615,7 +615,7 @@ section {
     padding: 25px;
 
     background: var(--charcoal);
-
+    border: 1px solid var(--border);
     transition:
         background 0.3s ease;
 }

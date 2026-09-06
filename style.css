@@ -457,12 +457,7 @@ section {
 
     align-items: center;
 
-    background:
-        radial-gradient(
-            circle at 70% 50%,
-            rgba(20, 91, 67, 0.10),
-            transparent 40%
-        );
+    background: transparent
 }
 
 .shift-content h2 {

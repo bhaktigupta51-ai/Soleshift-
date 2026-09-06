@@ -1233,3 +1233,135 @@ section {
         gap: 15px;
     }
 }
+
+/* =========================================================
+   MOBILE HEADER + FOOTER
+========================================================= */
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE HEADER
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        background: rgba(5, 7, 6, 0.96);
+    }
+
+    .nav-container {
+        width: calc(100% - 32px);
+        min-height: 68px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    /* Hide desktop navigation */
+    .nav-links {
+        display: none;
+    }
+
+    /* Hamburger */
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        background: transparent;
+
+        border: 1px solid rgba(199, 166, 90, 0.45);
+
+        color: var(--gold-light);
+
+        font-size: 22px;
+
+        cursor: pointer;
+
+        padding: 0;
+    }
+
+
+    /* =========================
+       MOBILE FOOTER
+    ========================= */
+
+    .footer {
+        padding-top: 45px;
+        padding-bottom: 25px;
+    }
+
+    .footer-content {
+        width: calc(100% - 32px);
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 35px;
+    }
+
+    .footer-brand img {
+        width: 100px;
+    }
+
+    .footer-brand p {
+        margin-top: 12px;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+    .footer-links {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 18px 15px;
+
+        align-items: start;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+
+        letter-spacing: 1.2px;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 32px);
+
+        margin-top: 35px;
+
+        padding-top: 18px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+
+        align-items: flex-start;
+
+        font-size: 9px;
+
+        line-height: 1.5;
+    }
+
+}

@@ -1,0 +1,1098 @@
+/* =========================================================
+   SOLESHIFT
+   Main Website Styles
+========================================================= */
+
+
+/* =========================================================
+   1. ROOT / DESIGN SYSTEM
+========================================================= */
+
+:root {
+    --black: #050706;
+    --dark: #0a0f0d;
+    --charcoal: #111714;
+    --green: #0d2a20;
+    --green-light: #174636;
+
+    --gold: #c7a65a;
+    --gold-light: #e1c77b;
+
+    --white: #f5f5f0;
+    --muted: #a8ada8;
+    --border: rgba(255, 255, 255, 0.10);
+
+    --max-width: 1200px;
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   3. GLOBAL CONTAINER
+========================================================= */
+
+.nav-container,
+.hero,
+.problem-section,
+.shift-section,
+.how-section,
+.sole-section,
+.lifestyle-section,
+.benefits-section,
+.engineering-section,
+.team-section,
+.cta-section,
+.footer-content,
+.footer-bottom {
+    width: min(100% - 40px, var(--max-width));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   4. NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(5, 7, 6, 0.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.4px;
+
+    color: #d8ddd9;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold-light);
+}
+
+.nav-cta {
+    padding: 10px 17px;
+
+    border: 1px solid rgba(199, 166, 90, 0.55);
+
+    color: var(--gold-light) !important;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.nav-cta:hover {
+    background: var(--gold);
+    color: var(--black) !important;
+}
+
+
+/* =========================================================
+   5. HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding-top: 130px;
+    padding-bottom: 70px;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(20, 91, 67, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    right: 10%;
+    top: 20%;
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 88px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+
+    max-width: 700px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.shift-content h2 span,
+.engineering-content h2 span,
+.cta-section h2 span {
+    display: block;
+
+    color: var(--gold-light);
+}
+
+.hero-description {
+    margin-top: 28px;
+
+    max-width: 520px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: var(--muted);
+}
+
+.primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 32px;
+
+    padding: 14px 23px;
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    background: var(--gold-light);
+
+    box-shadow:
+        0 10px 35px rgba(199, 166, 90, 0.18);
+}
+
+.hero-image {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 650px;
+
+    filter:
+        drop-shadow(0 25px 35px rgba(0, 0, 0, 0.65));
+
+    animation: heroFloat 5s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   6. SECTION COMMON STYLES
+========================================================= */
+
+section {
+    position: relative;
+}
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: clamp(38px, 6vw, 72px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    max-width: 800px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+
+    max-width: 580px;
+
+    margin-top: 20px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   7. PROBLEM SECTION
+========================================================= */
+
+.problem-section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.problem-content {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.problem-text p {
+    color: var(--muted);
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+
+    max-width: 500px;
+}
+
+.problem-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.problem-stat {
+    padding: 28px 22px;
+
+    border-top: 1px solid var(--gold);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 67, 50, 0.35),
+            rgba(10, 15, 13, 0.4)
+        );
+}
+
+.problem-stat span {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.problem-stat h3 {
+    margin-top: 25px;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+
+.problem-stat p {
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   8. THE SHIFT
+========================================================= */
+
+.shift-section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(17, 72, 53, 0.20),
+            transparent 45%
+        );
+}
+
+.shift-content h2 {
+    font-size: clamp(42px, 6vw, 74px);
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+}
+
+.shift-content > p:last-child {
+    color: var(--muted);
+
+    max-width: 500px;
+
+    margin-top: 28px;
+
+    font-size: 16px;
+}
+
+.exploded-product {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.exploded-product img {
+    width: 100%;
+    max-width: 650px;
+
+    filter:
+        drop-shadow(0 25px 35px rgba(0, 0, 0, 0.55));
+}
+
+
+/* =========================================================
+   9. HOW IT WORKS
+========================================================= */
+
+.how-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.step {
+    padding: 40px 25px;
+
+    border-right: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.step:last-child {
+    border-right: none;
+}
+
+.step:hover {
+    background: rgba(16, 63, 47, 0.22);
+
+    transform: translateY(-4px);
+}
+
+.step-number {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.step h3 {
+    margin-top: 35px;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+}
+
+.step p {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   10. SOLE SYSTEM
+========================================================= */
+
+.sole-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--charcoal),
+            var(--black)
+        );
+}
+
+.sole-showcase {
+    margin-bottom: 55px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.sole-showcase img {
+    width: 100%;
+
+    max-width: 1050px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.sole-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: var(--border);
+}
+
+.sole-card {
+    min-height: 190px;
+
+    padding: 25px;
+
+    background: var(--charcoal);
+
+    transition:
+        background 0.3s ease;
+}
+
+.sole-card:hover {
+    background: var(--green);
+}
+
+.sole-card span {
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.sole-card h3 {
+    margin-top: 28px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.7px;
+}
+
+.sole-card p {
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   11. LIFESTYLE
+========================================================= */
+
+.lifestyle-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.lifestyle-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.lifestyle-card {
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    background: var(--charcoal);
+}
+
+.lifestyle-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.lifestyle-card:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(0.72);
+}
+
+.lifestyle-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.9)
+        );
+}
+
+.lifestyle-overlay span {
+    color: var(--gold);
+
+    font-size: 11px;
+}
+
+.lifestyle-overlay h3 {
+    margin-top: 8px;
+
+    font-size: 25px;
+
+    letter-spacing: 1px;
+}
+
+.lifestyle-overlay p {
+    color: #c4c9c5;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   12. BENEFITS
+========================================================= */
+
+.benefits-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
+    background: var(--green);
+}
+
+.benefits-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 1px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.benefit {
+    padding: 30px 22px;
+
+    background: rgba(5, 7, 6, 0.35);
+
+    min-height: 250px;
+}
+
+.benefit span {
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.benefit h3 {
+    margin-top: 45px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+.benefit p {
+    margin-top: 12px;
+
+    color: #b6c0ba;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   13. ENGINEERING
+========================================================= */
+
+.engineering-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.engineering-content h2 {
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+}
+
+.engineering-content > p:last-child {
+    margin-top: 28px;
+
+    color: var(--muted);
+
+    max-width: 480px;
+}
+
+.engineering-image img {
+    width: 100%;
+
+    border: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   14. TEAM
+========================================================= */
+
+.team-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.team-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.team-member {
+    padding: 45px 25px;
+
+    min-height: 180px;
+
+    border: 1px solid var(--border);
+
+    background: var(--charcoal);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.team-member:hover {
+    border-color: rgba(199, 166, 90, 0.55);
+
+    transform: translateY(-5px);
+}
+
+.team-member span {
+    display: flex;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    border-radius: 50%;
+
+    font-weight: 700;
+}
+
+.team-member h3 {
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   15. FINAL CTA
+========================================================= */
+
+.cta-section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(21, 83, 61, 0.35),
+            transparent 55%
+        );
+}
+
+.cta-section h2 {
+    font-size: clamp(50px, 9vw, 110px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+}
+
+.cta-section > p:not(.eyebrow) {
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+    border-top: 1px solid var(--border);
+
+    background: #030504;
+}
+
+.footer-content,
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-brand img {
+    width: 120px;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    align-items: center;
+}
+
+.footer-links a {
+    color: #b8bdb9;
+
+    font-size: 10px;
+
+    letter-spacing: 1.3px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    margin-top: 50px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: #6f7671;
+
+    font-size: 10px;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   17. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 140px;
+    }
+
+    .hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-description {
+        max-width: 600px;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .problem-content,
+    .shift-section,
+    .engineering-section {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .problem-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .step:nth-child(2) {
+        border-right: none;
+    }
+
+    .sole-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lifestyle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lifestyle-card {
+        min-height: 450px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   18. MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .nav-container,
+    .hero,
+    .problem-section,
+    .shift-section,
+    .how-section,
+    .sole-section,
+    .lifestyle-section,
+    .benefits-section,
+    .engineering-section,
+    .

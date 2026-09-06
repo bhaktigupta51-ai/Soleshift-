@@ -1094,5 +1094,182 @@ section {
     .sole-section,
     .lifestyle-section,
     .benefits-section,
-    .engineering-section,
-    .
+    .team-section,
+    .cta-section,
+    .footer-content,
+    .footer-bottom {
+        width: min(100% - 28px, var(--max-width));
+    }
+
+    /* General section spacing */
+    .problem-section,
+    .shift-section,
+    .how-section,
+    .sole-section,
+    .lifestyle-section,
+    .benefits-section,
+    .team-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    /* Headings */
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(34px, 10vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .section-heading > p:last-child {
+        font-size: 14px;
+        margin-top: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 70px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(44px, 13vw, 62px);
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        margin-top: 0;
+    }
+
+    /* Problem */
+    .problem-content {
+        gap: 35px;
+    }
+
+    .problem-text p {
+        font-size: 15px;
+    }
+
+    .problem-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .problem-stat {
+        padding: 22px;
+    }
+
+    /* The Shift */
+    .shift-section {
+        gap: 30px;
+    }
+
+    .shift-content h2 {
+        font-size: clamp(38px, 11vw, 55px);
+    }
+
+    .exploded-product {
+        padding: 0;
+    }
+
+    /* How it works */
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        padding: 28px 20px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .step:last-child {
+        border-bottom: none;
+    }
+
+    .step h3 {
+        margin-top: 20px;
+    }
+
+    /* Sole system */
+    .sole-showcase {
+        margin-bottom: 35px;
+    }
+
+    .sole-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .sole-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .sole-card h3 {
+        margin-top: 18px;
+    }
+
+    /* Lifestyle */
+    .lifestyle-card {
+        min-height: 400px;
+    }
+
+    /* Benefits */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        background: transparent;
+    }
+
+    .benefit {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .benefit h3 {
+        margin-top: 25px;
+    }
+
+    /* Team */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .team-member {
+        min-height: 150px;
+        padding: 30px 20px;
+    }
+
+    /* CTA */
+    .cta-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .cta-section h2 {
+        font-size: clamp(48px, 14vw, 70px);
+        letter-spacing: -3px;
+    }
+
+    /* Footer */
+    .footer-content,
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}

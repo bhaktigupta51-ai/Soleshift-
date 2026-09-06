@@ -786,45 +786,6 @@ section {
 }
 
 
-/* =========================================================
-   13. ENGINEERING
-========================================================= */
-
-.engineering-section {
-    padding-top: 140px;
-    padding-bottom: 140px;
-
-    display: grid;
-
-    grid-template-columns: 0.8fr 1.2fr;
-
-    gap: 60px;
-
-    align-items: center;
-}
-
-.engineering-content h2 {
-    font-size: clamp(40px, 6vw, 70px);
-
-    line-height: 0.95;
-
-    letter-spacing: -2px;
-}
-
-.engineering-content > p:last-child {
-    margin-top: 28px;
-
-    color: var(--muted);
-
-    max-width: 480px;
-}
-
-.engineering-image img {
-    width: 100%;
-
-    border: 1px solid var(--border);
-}
-
 
 /* =========================================================
    14. TEAM
